@@ -1,0 +1,18 @@
+
+[
+    {
+        type: 'Feature Project',
+        title: 'Crypto Screener Application',
+        summary:'A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency.'
+    },
+    {
+        type:'Basic Project',
+        title: 'Web 3 project',
+        summary:'A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency.'
+    },
+    {
+        type:'Basic Project',
+        title: 'NFT Project',
+        summary:'A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency.'
+    }
+]

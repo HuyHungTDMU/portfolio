@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/fs-extra": "^11.0.1",
+    "@motionone/utils": "^10.15.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.6.0",
@@ -17,7 +17,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scroll": "^1.8.9",
-    "react-slick": "^0.29.0"
+    "react-slick": "^0.29.0",
+    "react-slideshow-image": "^4.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
