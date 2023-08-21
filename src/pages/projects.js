@@ -30,7 +30,7 @@ const FeatureProject = ({link, img, title, type, summary}) => {
     return (
         <article
             className="border bg-[#2c7873] z-0 border-[#2c7873] pt-2 pb-6 pl-2 pr-6 rounded-3xl relative flex gap-4">
-            <div className="w-1/2 flex flex-col gap-3 justify-around items-center">
+            <div className="w-56 flex flex-col gap-3 justify-around items-center">
                 <Link href={link}>
                     <MotionImage
                         src={img}
@@ -46,13 +46,13 @@ const FeatureProject = ({link, img, title, type, summary}) => {
                 </Link>
             </div>
 
-            <div className="w-1/2 flex flex-col items-left gap-2">
+            <div className="w-full flex flex-col items-left gap-2">
                 <span className="text-xl text-[#2c7873] italic">{type}</span>
                 <Link href={link}>
                     <h2 className="text-3xl text-[#2c7873] font-semibold">{title}</h2>
                 </Link>
 
-                <p className="text-base text-dark">{summary}</p>
+                <p className="text-base text-dark line-clamp-4">{summary}</p>
             </div>
 
             <div
@@ -125,7 +125,7 @@ export default function Projects() {
                         <AnimatedText text="DỰ ÁN" className='!font-bold !text-[#2c7873]'/>
 
                         <div className='mt-4 flex flex-col items-center justify-center '>
-                            <div className="grid grid-cols-2 justify-between gap-12">
+                            <div className="grid grid-cols-1 xl:grid-cols-2 justify-between gap-12">
                                 {drawDataProject.map((item, index) => <FeatureProject
                                     key={index}
                                     type={item.subTitle}

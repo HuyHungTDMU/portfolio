@@ -125,12 +125,12 @@ export default function Home() {
             </Head>
             <main className="flex items-center text-dark w-full min-h-screen">
                 <Layout>
-                    <div className="flex items-center justify-between w-full gap-7 mt-10">
-                        <div className="w-1/2">
+                    <div className="flex flex-col xl:flex-row items-center justify-between w-full gap-7 mt-10">
+                        <div className="xl:w-1/2 w-full">
                             <Slideshow/>
                         </div>
 
-                        <div className="w-1/2 flex flex-col items-center self-center">
+                        <div className="xl:w-1/2 w-full flex flex-col items-center self-center">
                             <AnimatedText
                                 text="Nhà Sản Xuất Chuyên Nghiệp"
                                 className="!text-6xl !text-left !font-serif !italic !text-[#2c7873]"

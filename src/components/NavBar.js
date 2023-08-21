@@ -1,19 +1,19 @@
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
-import {SvgInstagram, SvgPinterest, SvgTwitter} from "./Icons";
+import {SvgInstagram, SvgMenu, SvgPinterest, SvgTwitter} from "./Icons";
 import {motion} from "framer-motion";
 import {useRouter} from "next/router";
 
-const CustomLink = ({href, title, className = "", classHover = ""}) => {
+const CustomLink = ({href, title, scrollActive, className = "", classHover = ""}) => {
     const router = useRouter();
 
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
             <span
-                className={`inline-block bg-white h-[1px] left-0 absolute -bottom-0.5 ease duration-300 group-hover:w-full w-0 ${classHover} ${
+                className={`inline-block h-[1px] left-0 absolute -bottom-0.5 ease duration-300 group-hover:w-full w-0 ${classHover} ${
                     router.pathname === href && "w-full"
-                }`}>
+                } ${scrollActive ? 'bg-[#2c7873]' : 'bg-white'}`}>
         &nbsp;
       </span>
         </Link>
@@ -31,34 +31,52 @@ const NavBar = () => {
 
     return (
         <header
-            className={`fixed top-0 z-30 transition-all w-full px-32 py-5 font-medium flex items-center bg-[#65A69A] justify-between ${
+            className={`fixed top-0 z-30 transition-all w-full px-7 sm:px-16 lg:px-32 py-5 font-medium flex items-center bg-[#65A69A] justify-between ${
                 scrollActive && "bg-light shadow-2xl"
             }`}>
             <nav
-                className={`space-x-7 text-ellipsis ${
-                    scrollActive ? "text-purple-950" : "text-white"
+                className={`space-x-7 text-ellipsis lg:block hidden ${
+                    scrollActive ? "text-[#2c7873]" : "text-white"
                 }`}>
                 <CustomLink
                     href="/"
                     title="Home"
+                    scrollActive={scrollActive}
                     classHover={`${scrollActive && "bg-purple-950"}`}
                 />
                 <CustomLink
                     href="/about"
                     title="About"
+                    scrollActive={scrollActive}
                     classHover={`${scrollActive && "bg-purple-950"}`}
                 />
                 <CustomLink
                     href="/projects"
                     title="Projects"
+                    scrollActive={scrollActive}
                     classHover={`${scrollActive && "bg-purple-950"}`}
                 />
-                <CustomLink href="/news" title="News"/>
+                <CustomLink href="/news" title="News"
+                            scrollActive={scrollActive}
+                            classHover={`${scrollActive && "bg-purple-950"}`}/>
                 <CustomLink
                     href="/contact"
                     title="Contact"
+                    scrollActive={scrollActive}
                     classHover={`${scrollActive && "bg-purple-950"}`}
                 />
+            </nav>
+
+            <nav
+                className={`space-x-7 text-ellipsis lg:hidden ${
+                    scrollActive ? "text-[#2c7873]" : "text-white"
+                }`}>
+                <Link
+                    href="/"
+                    title="Home"
+                    scrollActive={scrollActive}
+                    classHover={`${scrollActive && "bg-purple-950"}`}
+                ><SvgMenu/></Link>
             </nav>
 
             <nav className="gap-5 flex items-center">

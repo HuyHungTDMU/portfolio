@@ -74,7 +74,7 @@ export default function About() {
                             </h2>
 
                             <div className="space-y-7">
-                                <div className="flex gap-4">
+                                <div className="flex flex-col-reverse lg:flex-row gap-4">
                                     <p>
                                         ANRY đã không ngừng cải tiến thiết bị và quy trình để tạo ra
                                         các sản phẩm tinh xảo. Phân phối rộng hơn nữa các sản phẩm
@@ -91,11 +91,11 @@ export default function About() {
                                     />
                                 </div>
 
-                                <div className="flex gap-4">
+                                <div className="flex lg:flex-row flex-col gap-4">
                                     <Image
                                         src={imgAbout2}
                                         alt="about"
-                                        className="w-60 h-auto rounded-xl"
+                                        className="w-full h-auto rounded-xl"
                                     />
                                     <p className="w-full">
                                         ANRY còn cung cấp giải pháp cho các doanh nghiệp trong lĩnh
